@@ -1,0 +1,27 @@
+ALGORITHM algorithm_calculate
+VAR
+    i,nb_words,long,num_voy :INTEGER :=0;
+    ch:STRING
+BEGIN
+REPEAT
+    write("donner sentence");
+    read(ch);
+UNTIL (ch ="");
+  WHILE (ch <>".") DO
+    long:= long+1;
+          IF (ch[i]="a" OR ch[i] ="A" OR ch[i]="e" OR ch[i]="E" OR ch[i]="U"OR ch[i]="u" OR ch[i]="i" OR ch[i]=I OR ch[i]="o" OR ch[i]=O  ) THEN
+              num_voy:=num_voy+1;
+          END_IF
+          IF (ch[i]=" ") THEN
+              nb_words:= nb_words+1;
+          END_IF
+      i := i+1;
+  END_WHILE
+  long := long +1;
+  IF (ch[i-1]= " ") THEN
+      nb_words :=nb_words +1;
+  END_IF
+ write(nb_words);
+ write(num_voy);
+  write(long);
+END
